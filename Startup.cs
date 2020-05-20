@@ -15,9 +15,8 @@ namespace DotnetCity.Cryptography
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddTransient<ICrypto, Crypto>();
         }
-
-        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
